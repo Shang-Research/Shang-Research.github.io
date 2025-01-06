@@ -1,0 +1,12 @@
+# - name: Example student name
+#   photo: rock.jpg
+#   info: Postdoc, started Oct 2040
+#   email: exampleemail@gmail.com
+#   website: https://website.com
+
+- name: "You?"
+  photo: rock.jpg
+  # info: See <a href="www">openings</a> for more information.
+  # info: We are looking for new team members [(see openings)]({{ site.url }}{{ site.baseurl}}/openings) **!**
+  # nfo: See <a{{ site.url }}{{ site.baseurl }}/Openings</a> for more information. 
+  # info: [(see openings)]({{ site.url }}{{ site.baseurl }}/openings)

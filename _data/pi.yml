@@ -1,0 +1,23 @@
+- name: Haitao Shang <br/>
+  #      Assistant Professor<br/>
+  #      The University of Texas at El Paso
+  photo: HaitaoShang.jpeg
+  info: Assistant Professor <br/>
+        Department of Earth, Environmental and Resource Sciences & Computational Science Program <br/>
+        The University of Texas at El Paso
+  email: hshang@utep.edu 
+  #github: https://github.com/sun-hongyu
+  #researchgate: https://www.researchgate.net/
+  #scholar: https://scholar.google.com/citations?user=SH1Dg9UAAAAJ&hl=en
+  #cv: cv/cv.pdf
+  #orcid: https://orcid.org/0000-0003-3828-1859
+  #linkedin: https://www.linkedin.com/in/hongyu-sun/
+  # Change the items in "education" you have (up to 6)
+  
+  education:
+    [
+      # "2024-, Assistant Professor, The University of Texas at El Paso",
+      # "2021-2024, Postdoc, Institute of Ecology and Evolution, University of Oregon",
+      "2015-2021, Ph.D. in Earth, Atmospheric and Planetary Sciences, Massachusetts Institute of Technology",
+      "2011-2015, B.S. in Mathematics & Physics & Geological Sciences, University of Minnesota",
+    ]
