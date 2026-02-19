@@ -78,8 +78,8 @@ scholar:
   source: /assets/
   bibliography: ref.bib
   bibliography_template: bibtemplate
-  sort_by: year, month
-  order: descending
+#  sort_by: year, month
+#  order: ascending
 
   replace_strings: true
   join_strings: true
@@ -90,8 +90,8 @@ scholar:
 
   query: "@*"
 
-  bibliography_list_attributes:
-    reversed: "reversed"
+  # bibliography_list_attributes:
+  #   reversed: false #"reversed"
     
 exclude:
   - Gemfile

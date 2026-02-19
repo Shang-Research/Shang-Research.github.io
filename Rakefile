@@ -26,6 +26,7 @@ task :publish => [:generate] do
     Dir.chdir tmp
 
     system "git init"
+    system "git branch -m main"  # 将默认分支重命名为 main
     system "git add ."
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m #{message.inspect}"
