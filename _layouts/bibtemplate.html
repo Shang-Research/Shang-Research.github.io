@@ -45,41 +45,15 @@ pre{
 {% endif %} -->
 
 {% if entry.commentary %}
-<div class="commentary-section" style="margin-top: 10px;">
-    
-    <button class="btn custom-btn btn-sm" 
-            onclick="var el = document.getElementById('commentary-{{entry.key}}'); el.style.display = (el.style.display === 'none') ? 'block' : 'none';">
-        Featured Commentary
-    </button>
+<button class="btn custom-btn btm-sm" onclick="togglecommentary{{entry.key}}()">Featured Commentary</button>
 
-    <div id="commentary-{{entry.key}}" style="display: none; background-color: #EBEFF1; border-radius: 5px; padding: 15px; margin-top: 10px; margin-bottom: 20px;">
-        
-        <p style="font-size: 0.9em; margin-bottom: 10px; color: #333; line-height: 1.5;">
-            {{ entry.commentary }}
-        </p>
-        
-        {% if entry.commentary_file %}
-        <div style="margin-top: 10px; border-top: 1px dashed #ccc; pt-2;">
-            <iframe src="{{ site.baseurl }}/papers/{{ entry.commentary_file }}" 
-                    width="100%" 
-                    height="600px" 
-                    style="border: 1px solid #ccc; border-radius: 5px; margin-top: 10px;">
-                <a href="{{ site.baseurl }}/papers/{{ entry.commentary_file }}">View PDF</a>
-            </iframe>
-        </div>
-        {% endif %}
-        
-    </div>
+<div id="c{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:15px; margin-top:10px; margin-bottom:20px;">
+    <p style="font-size: 0.9em; margin-bottom: 0px; color: #333; line-height: 1.5;">
+        {{ entry.commentary }}
+    </p>
 </div>
 {% endif %}
 
-{% comment %}
-{% if entry.custom_commentary %}
-<div style="font-size: 1rem; margin-top: 5px; color: black;">
-  {{ entry.custom_commentary | replace: 'Commentary:', '<b>Commentary:</b>' | markdownify }}
-</div>
-{% endif %}
-{% endcomment %}
 
 {% if entry.editorpick %}
 <button class="btn custom-btn btm-sm"  onclick="toggleeditorpick{{entry.key}}()">Editor's Pick</button>
