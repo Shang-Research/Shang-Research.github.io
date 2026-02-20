@@ -65,14 +65,18 @@ pre{
 
 {% if bibtest %}
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank">
-  <button class="btn custom-btn btm-sm" style="background-color: #007bff; border-color: #007bff; color: white;">PDF</button>
+  <button class="btn custom-btn btm-sm" style="background-color: #6c757d; border-color: #6c757d; color: white;">PDF</button>
 </a>
 {% endif %}
 {% if entry.doi %}
   {% if entry.doi contains 'http' %}
-    <a href="{{ entry.doi }}" target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
+    <a href="{{ entry.doi }}" target="_blank">
+      <button class="btn custom-btn btm-sm" style="background-color: #6c757d; border-color: #6c757d; color: white;">DOI</button>
+    </a>
   {% else %}
-    <a href="https://doi.org/{{ entry.doi }}" target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
+    <a href="https://doi.org/{{ entry.doi }}" target="_blank">
+      <button class="btn custom-btn btm-sm" style="background-color: #6c757d; border-color: #6c757d; color: white;">DOI</button>
+    </a>
   {% endif %}
 {% endif %}
 
