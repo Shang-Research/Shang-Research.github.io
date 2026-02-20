@@ -44,19 +44,15 @@ pre{
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm" style="background-color: #9e9f9e; border-color: #596159;">PDF</button></a>
 {% endif %} -->
 
-<div class="button-group">
 {% if entry.commentary %}
   <button class="btn custom-btn btm-sm" 
           onclick="toggleCommentary{{entry.key}}()" 
-          style="background-color: #d9534f; border-color: #d43f3a; color: white; margin-right: 5px;">
-    Featured Commentary
+          style="background-color: #d9534f; border-color: #d43f3a; color: white; margin-right: 5px;">Featured Commentary
   </button>
-  
   <div id="c{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:15px; margin-top:10px; margin-bottom:20px;">
     <pre style="white-space: pre-wrap;">{{entry.commentary}}</pre>
   </div>
   {% endif %}
-</div>
 
 {% if entry.editorpick %}
 <button class="btn custom-btn btm-sm" onclick="toggleeditorpick{{entry.key}}()" style="background-color: #d9534f; border-color: #d43f3a; color: white;">Editor's Pick
