@@ -44,15 +44,11 @@ pre{
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm" style="background-color: #9e9f9e; border-color: #596159;">PDF</button></a>
 {% endif %} -->
 
-{% if entry.commentary_file %}
+{% if entry.commentary %}
 <button class="btn custom-btn btm-sm" onclick="toggleCommentary{{entry.key}}()">Featured Commentary</button>
 
 <div id="commentary-{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:15px; margin-top:10px; margin-bottom:20px;">
     <p style="font-size: 0.9em; margin-bottom: 10px; color: #333;">{{ entry.commentary }}</p>
-    
-    <iframe src="/papers/{{ entry.commentary_file }}" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 5px;">
-        <a href="/papers/{{ entry.commentary_file }}">PDF</a>。
-    </iframe>
 </div>
 {% endif %}
 
