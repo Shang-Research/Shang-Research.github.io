@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: gridlay
 title: Home
 permalink: /
 ---
