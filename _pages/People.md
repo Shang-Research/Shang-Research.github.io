@@ -5,6 +5,7 @@ sitemap: false
 permalink: /People/
 ---
 
+{% comment %}
 <div style="text-align: center; margin: 20px 0;">
   <h2 style="font-size: 1.8rem; font-weight: bold; color: black;">
     We are looking for mutiple group members.
@@ -13,10 +14,9 @@ permalink: /People/
   <a href="{{ site.url }}{{ site.baseurl }}/papers/2025GraduatePositions.pdf" style="font-size: 1.8rem; font-weight: bold;"><span style="color: #2a7ae2;">here.</span> 
   </h2>
   </div>
-
+{% endcomment %}
 
 <br/>
-
 
 #### Principle Investigator
 
@@ -38,7 +38,7 @@ permalink: /People/
 <ul style="overflow: hidden">
 <li> {{ member.education[0] }} </li>
 <li> {{ member.education[1] }} </li>
-<!-- <li> {{ member.education[2] }} </li> -->
+<li> {{ member.education[2] }} </li>
 <!-- <li> {{ member.education[3] }} </li> -->
 </ul>
 Email: {{ member.email}}
@@ -48,6 +48,8 @@ Email: {{ member.email}}
 
 {% endfor %}
 
+
+{% comment %}
 #### Group Members
 
 <div class='jumbotron' style="background-color:#EBEFF1;">
@@ -93,3 +95,5 @@ Email: {{ member.email}}
 </div>
 {% endif %}
 </div>
+
+{% endcomment %}

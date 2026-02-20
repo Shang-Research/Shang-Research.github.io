@@ -22,8 +22,10 @@ pre{
 }
 </style>
 
+<div class="text-justify">
+  {{ reference | replace: 'Shang, H.', '<b>Shang, H.</b>' | replace: 'Shang, Haitao', '<b>Shang, Haitao</b>' }}
+</div>
 
-<div class="text-justify">{{reference}}</div>
 
 <!-- You can use the below to make your name bold -->
 <!-- {{reference | replace_first: 'Bryngelson, S. H.', '<b>Bryngelson, S. H.</b>' | replace_first: 'Bryngelson, S.', '<b>Bryngelson, S.</b>' }}</div> -->
@@ -42,15 +44,26 @@ pre{
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn btn-success btm-sm" style="background-color: #9e9f9e; border-color: #596159;">PDF</button></a>
 {% endif %} -->
 
+{% if entry.commentary_file %}
+<button class="btn custom-btn btm-sm" onclick="toggleCommentary{{entry.key}}()">Featured Commentary</button>
 
-
-{% if entry.commentary %}
-<button class="btn custom-btn btm-sm"  onclick="toggleCommentary{{entry.key}}()">Commentary</button>
-<div id="b{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:10px; margin-bottom:20px;">
-    <pre>{{entry.commentary}}</pre>
+<div id="commentary-{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:15px; margin-top:10px; margin-bottom:20px;">
+    <p style="font-size: 0.9em; margin-bottom: 10px; color: #333;">{{ entry.commentary }}</p>
+    
+    <iframe src="/papers/{{ entry.commentary_file }}" width="100%" height="600px" style="border: 1px solid #ccc; border-radius: 5px;">
+        <a href="/papers/{{ entry.commentary_file }}">PDF</a>。
+    </iframe>
 </div>
 {% endif %}
 
+
+{% comment %}
+{% if entry.custom_commentary %}
+<div style="font-size: 1rem; margin-top: 5px; color: black;">
+  {{ entry.custom_commentary | replace: 'Commentary:', '<b>Commentary:</b>' | markdownify }}
+</div>
+{% endif %}
+{% endcomment %}
 
 {% if entry.editorpick %}
 <button class="btn custom-btn btm-sm"  onclick="toggleeditorpick{{entry.key}}()">Editor's Pick</button>
@@ -59,16 +72,15 @@ pre{
 </div>
 {% endif %}
 
-
 {% if bibtest %}
 <a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn custom-btn btm-sm">PDF</button></a>
 {% endif %}
 {% if entry.doi %}
-{% if entry.type == 'unpublished' %}
-<a href="{{ entry.doi | prepend: '' }}"target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
-{% else %}
-<a href="{{ entry.doi | prepend: '' }}" target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
-{% endif %}
+  {% if entry.doi contains 'http' %}
+    <a href="{{ entry.doi }}" target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
+  {% else %}
+    <a href="https://doi.org/{{ entry.doi }}" target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
+  {% endif %}
 {% endif %}
 
 {% if entry.abstract %}

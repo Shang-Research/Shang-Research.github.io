@@ -4,8 +4,8 @@
 #   email: exampleemail@gmail.com
 #   website: https://website.com
 
-- name: "You?"
-  photo: rock.jpg
+# name: "You?"
+# photo: rock.jpg
   # info: See <a href="www">openings</a> for more information.
   # info: We are looking for new team members [(see openings)]({{ site.url }}{{ site.baseurl}}/openings) **!**
   # nfo: See <a{{ site.url }}{{ site.baseurl }}/Openings</a> for more information. 

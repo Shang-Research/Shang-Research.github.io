@@ -25,8 +25,13 @@ years: [2016, 2017, 2018, 2019, 2020, 2021]
 
 <div class="jumbotron" style="background-color: transparent; border: none;">
 
-### Research Articles
 
+### Peer-Reviewed Articles
 <div class="bibliography">
-  {% bibliography --query @article @otherwork %}
+  {% bibliography --query @article %}
+</div>
+
+### Preprints
+<div class="bibliography">
+  {% bibliography --query @unpublished %}
 </div>
