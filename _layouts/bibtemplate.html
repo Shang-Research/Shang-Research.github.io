@@ -51,7 +51,6 @@ pre{
 </div>
 {% endif %}
 
-
 {% if entry.editorpick %}
 <button class="btn custom-btn btm-sm"  onclick="toggleeditorpick{{entry.key}}()">Editor's Pick</button>
 <div id="b{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:10px; margin-bottom:20px;">
@@ -93,7 +92,7 @@ function toggleAbstract{{entry.key}}(parameter) {
     }
 }
 function toggleCommentary{{entry.key}}(parameter) {
-    var x= document.getElementById('b{{entry.key}}');
+    var x = document.getElementById('c{{entry.key}}');
     if (x.style.display === 'none') {
         x.style.display = 'block';
     } else {
