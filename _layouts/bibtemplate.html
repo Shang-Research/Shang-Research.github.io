@@ -45,21 +45,27 @@ pre{
 {% endif %} -->
 
 {% if entry.commentary %}
-<button class="btn custom-btn btm-sm" onclick="toggleCommentary{{entry.key}}()">Featured Commentary</button>
+<button class="btn custom-btn btm-sm" onclick="toggleCommentary{{entry.key}}()"style="background-color: #d9534f; border-color: #d43f3a; color: white;">Featured Commentary
+</button>
 <div id="c{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:15px; margin-top:10px; margin-bottom:20px;">
     <pre>{{entry.commentary}}</pre>
 </div>
 {% endif %}
 
+
 {% if entry.editorpick %}
-<button class="btn custom-btn btm-sm"  onclick="toggleeditorpick{{entry.key}}()">Editor's Pick</button>
+<button class="btn custom-btn btm-sm" onclick="toggleeditorpick{{entry.key}}()" style="background-color: #d9534f; border-color: #d43f3a; color: white;">Editor's Pick
+</button>
 <div id="b{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:10px; margin-bottom:20px;">
     <pre>{{entry.editorpick}}</pre>
 </div>
 {% endif %}
 
+
 {% if bibtest %}
-<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank"><button class="btn custom-btn btm-sm">PDF</button></a>
+<a href="{{ site.url }}{{ site.baseurl }}/papers/{{ entry.file }}" target="_blank">
+  <button class="btn custom-btn btm-sm" style="background-color: #007bff; border-color: #007bff; color: white;">PDF</button>
+</a>
 {% endif %}
 {% if entry.doi %}
   {% if entry.doi contains 'http' %}
@@ -68,6 +74,7 @@ pre{
     <a href="https://doi.org/{{ entry.doi }}" target="_blank"><button class="btn custom-btn btm-sm">DOI</button></a>
   {% endif %}
 {% endif %}
+
 
 {% if entry.abstract %}
 <button class="btn custom-btn btm-sm"  onclick="toggleAbstract{{entry.key}}()">ABSTRACT</button>
