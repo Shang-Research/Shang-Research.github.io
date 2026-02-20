@@ -46,11 +46,8 @@ pre{
 
 {% if entry.commentary %}
 <button class="btn custom-btn btm-sm" onclick="togglecommentary{{entry.key}}()">Featured Commentary</button>
-
 <div id="c{{entry.key}}" style="display: none; background-color:#EBEFF1; border-radius:5px; padding:15px; margin-top:10px; margin-bottom:20px;">
-    <p style="font-size: 0.9em; margin-bottom: 0px; color: #333; line-height: 1.5;">
-        {{ entry.commentary }}
-    </p>
+    <pre>{{entry.commentary}}</pre>
 </div>
 {% endif %}
 
