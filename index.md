@@ -55,8 +55,8 @@ Email: {{ member.email}}
     <ul style="list-style-type: circle; margin-left: 20px; margin-top: 5px;">
       <li><span style="font-size: 1rem; ">Mechanistic theories, computational algorithms, and AI-based models.</span></li>
       <li><span style="font-size: 1rem; ">Causal inference, stochastic process, and probabilistic models.</span></li>
-      <li><span style="font-size: 1rem; ">Computational biology & phylogenetics & molecular evolution. </span></li> 
-      <li><span style="font-size: 1rem; ">Complex systems theory (particularly nonlinear dynamics $\&$ network theory).</span></li>
+      <li><span style="font-size: 1rem; ">Computational biology, phylogenetics, and molecular evolution. </span></li> 
+      <li><span style="font-size: 1rem; ">Complex systems theory (particularly nonlinear dynamics and network theory).</span></li>
 
     </ul>
   </li>
